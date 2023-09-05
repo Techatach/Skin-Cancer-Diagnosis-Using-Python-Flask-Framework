@@ -1,0 +1,21 @@
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <title>Skin Cancer Prediction</title>
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <center><h1 style="padding:30px;font-weight: 600 !important;font-size: 3.2em; font-family: Kanit, sans-serif">การตรวจวินิจมะเร็งผิวหนัง</h1></center>
+    </div>
+    <div>
+    <div class="col-lg-12" style="font-family: Kanit, sans-serif">
+      <center><form  class="form-inline" action = "/predict" method = "post" enctype="multipart/form-data">
+          <input type="file" name="file" class="form-control form-control-lg"/><br>
+          <input type = "submit" class="btn btn-success" value="Predict" style="margin-top: 20px; padding:5px; font-weight: 600 !important;font-size: 18px; font-family: Kanit, sans-serif; background-color:#04aa6d;color:white;border-radius:5px">
+      </form></center>
+    </div>
+    </div>
+</body>
+</html>

@@ -11,7 +11,12 @@ model = load_model('keras_model.h5')
 target_img = os.path.join(os.getcwd() , 'static/images')
 
 @app.route('/')
-def index_view():
+def home():
+    return render_template('home.html')
+
+
+@app.route('/index')
+def index():
     return render_template('index.html')
 
 #Allow files with extension png, jpg and jpeg

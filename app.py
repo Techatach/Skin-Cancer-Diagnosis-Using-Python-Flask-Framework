@@ -7,7 +7,6 @@ import os
 from keras.preprocessing import image
 
 app = Flask(__name__)
-# model = load_model('Fruits_Classification.h5')
 model = load_model('keras_model.h5')
 target_img = os.path.join(os.getcwd() , 'static/images')
 
@@ -42,13 +41,10 @@ def predict():
             class_prediction=model.predict(img) 
             classes_x=np.argmax(class_prediction,axis=1)
             if classes_x == 0:
-              # fruit = "Apple"
               cancer = "Benign"
             elif classes_x == 1:
-              # fruit = "Banana"
               cancer = "Malignant"
             else:
-              # fruit = "Orange"
               pass
             return render_template('predict.html', cancer = cancer, prob=class_prediction, user_image = file_path)
         else:

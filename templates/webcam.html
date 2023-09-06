@@ -1,10 +1,16 @@
+{% extends 'home.html' %} {% block content %}
+
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <link
+      href="{{ url_for('static', filename='style/style.css') }}"
+      rel="stylesheet"
+    />
+    <title>{% block title %}Skin Cancer Prediction{% endblock title %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
@@ -12,11 +18,17 @@
   <body>
     <script src="" async defer></script>
 
-    <center style="font-family: Kanit, sans-serif">
+    <center style="font-family: Kanit, sans-serif; margin-top: 50px">
       <h1>
-        <div>การตรวจวินิจโรคมะเร็งผิวหนัง</div>
-        <button type="button" onclick="init()" class="bg-success text-white">
-          <h2 style="font-family: Kanit, sans-serif">Start</h2>
+        <div>การตรวจวินิจฉัยมะเร็งผิวหนัง</div>
+        <button
+          type="button"
+          onclick="init()"
+          class="bg-success text-white rounded-pill"
+        >
+          <h3 style="font-family: Kanit, sans-serif; padding: 1px 20px">
+            Start
+          </h3>
         </button>
         <div id="webcam-container" style="margin-top: 20px"></div>
         <div id="label-container"></div>
@@ -85,3 +97,5 @@
     </script>
   </body>
 </html>
+
+{% endblock %}

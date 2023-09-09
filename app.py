@@ -20,7 +20,7 @@ def index():
     return render_template('index.html')
 
 #Allow files with extension png, jpg and jpeg
-ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png'])
+ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png', 'gif'])
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT

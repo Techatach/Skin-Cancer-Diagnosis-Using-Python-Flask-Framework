@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 from keras.models import load_model
-import numpy as np
 from keras.preprocessing.image import load_img
 from keras.applications.vgg16 import preprocess_input
-import os
 from keras.preprocessing import image
+import numpy as np
+import os
+
 
 app = Flask(__name__)
 model = load_model('keras_model.h5')
